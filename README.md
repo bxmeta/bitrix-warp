@@ -54,14 +54,14 @@ brew install sshpass mysql-client php
 ```bash
 git clone https://github.com/bxmeta/bitrix-warp.git
 cd bitrix-warp
-chmod +x migrate.sh
+chmod +x bitrix-warp
 ```
 
 ### 2. Настройка параметров
 
 #### Вариант A: Через командную строку
 ```bash
-./migrate.sh \
+./bitrix-warp \
   --ip=192.168.1.100 \
   --login=root \
   --password=your_password \
@@ -82,13 +82,13 @@ cp .env.example .env
 nano .env
 
 # Запускаем миграцию
-./migrate.sh
+./bitrix-warp
 ```
 
 #### Вариант C: Интерактивный режим
 ```bash
 # Скрипт сам запросит недостающие параметры
-./migrate.sh
+./bitrix-warp
 ```
 
 ## ⚙️ Параметры конфигурации
